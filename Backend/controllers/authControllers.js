@@ -35,6 +35,7 @@ exports.signup = (req, res) => {
             }
 
             //? Sending OTP to email provided by user
+            //TODO
             sgMail.setApiKey(process.env.SENDGRID);
             const message = {
                 to: `${req.body.email}`,
