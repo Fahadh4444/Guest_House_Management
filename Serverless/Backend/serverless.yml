@@ -1,4 +1,4 @@
-service: RestApi
+service: GHM
 frameworkVersion: '2'
 
 provider:
@@ -11,8 +11,8 @@ provider:
   lambdaHashingVersion: 20201221
 
 functions:
-  hello:
-    handler: handler.hello
+  apisapp:
+    handler: handler.apiapp
     events:
       - http: ANY /{proxy+}
       - http: ANY /
