@@ -1,0 +1,18 @@
+service: RestApi
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  memorySize: 2048
+  stage: dev
+  timeout: 15
+  region: us-east-1
+  lambdaHashingVersion: 20201221
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http: ANY /{proxy+}
+      - http: ANY /
